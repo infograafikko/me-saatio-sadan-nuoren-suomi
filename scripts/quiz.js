@@ -1,3 +1,9 @@
+	//make variable for saving all reader's answers
+	var answerList = [];
+
+	//List of all questions
+	var questionList = ["me2", "me3", "me4", "me5", "me6", "me7", "me8", "me9", "me10", "me11", "me12"]
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyD0WD9SdNfBUYK9zbmOtW1wdFHW0e0W3Lc",
@@ -12,7 +18,7 @@
 
 
 //function to call quiz module
-function callEverything(qID, right, yAnswer1, yAnswer2, rAnswer1, rAnswer2, rAnswer3, source, pikscale, bufferwidth, bufferheight, xMarginPic, pik) {
+function callEverything(qID, right, highForOptismism, yAnswer1, yAnswer2, rAnswer1, rAnswer2, rAnswer3, source, pikscale, bufferwidth, bufferheight, xMarginPic, pik) {
 
 	//Database setup
 
@@ -232,10 +238,12 @@ slider.transition() // Gratuitous intro!
 	//Function for getting results after clicking "Katso oikea vastaus"
 	function getResults() {
 
+		saveAnswerForProfile();
 		callHist();
 		dissapear();
 		addRightAnswer();
 		legendAndText();
+		changeQvisibility();
 
 		//Push data to database
 		date = Date.now()
@@ -243,6 +251,30 @@ slider.transition() // Gratuitous intro!
 
 
 	}
+
+	//Save the guessed number for Profile after the test
+	function saveAnswerForProfile(){
+
+		var difference;
+
+		//Count difference between right and the guess
+		//Optimism variable
+		if (highForOptismism == true) {
+			difference = guessData - right;
+		} else {
+			difference = right - guessData;
+		}
+
+		answerList.push(difference)
+		console.log(answerList); 
+	}
+
+	//Push character results if it's the last question
+	function pushCharacterResult() {
+		if (final)
+		var sum = answerList.reduce(function(a, b) { return a + b; }, 0);
+		console.log(sum);
+	} 
 
 	//make a histogram setup
 	function callHist() {
@@ -526,5 +558,23 @@ slider.transition() // Gratuitous intro!
 			.transition()
 			.duration(300)
 			.style("opacity", 1);
+	}
+
+	//Append questions when questionare goes forward
+	function changeQvisibility() {
+
+		if (questionList.length > 0) {
+			//Take invisible class off to show the question
+			var elements = document.getElementsByClassName(questionList[0])
+			elements[0].classList.remove("invisible");
+			//Remove the top question in the list
+			questionList.shift();
+		} else {
+			//Give results for player
+			var sum = answerList.reduce(function(a, b) { return a + b; }, 0);
+			console.log(sum);
+			window.alert("Tuloksesi on: " + sum);
+		}
+
 	}
 }
