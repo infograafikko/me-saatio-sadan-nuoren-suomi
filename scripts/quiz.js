@@ -1,3 +1,6 @@
+	//Where is this stored
+	var urlHost = "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/";
+
 	//make variable for saving all reader's answers
 	var answerList = [];
 
@@ -600,6 +603,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Olet tietäjä";
 				var desc = "Tähän kuvausta";
+				var pic = "tietaja.png";
 
 			} else if (sum <= -100 & sum > -200) {
 				var elements = document.getElementsByClassName("me-pessimisti");
@@ -607,6 +611,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Olet pessimisti";
 				var desc = "Tähän kuvausta";
+				var pic = "pessimisti.png";
 
 			} else if (sum > 100 & sum <= 200) {
 				var elements = document.getElementsByClassName("me-optimisti");
@@ -614,6 +619,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Olet optimisti";
 				var desc = "Tähän kuvausta";
+				var pic = "optimisti.png";
 
 			} else {
 				var elements = document.getElementsByClassName("me-kupla");
@@ -621,6 +627,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Elät kuplassa";
 				var desc = "Tähän kuvausta";
+				var pic = "kupla.png";
 
 			}
 			//Show share button
@@ -632,13 +639,13 @@ slider.transition() // Gratuitous intro!
 }
 
 function shareThis() {
-    FB.ui({
-        display: 'popup',
+FB.ui({
         method: 'share',
+        href: urlHost,
+        picture: urlHost + 'img/' + pic,
         title: status,
         description: desc,
-        link: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
-        picture: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/img/tietaja.png",
-        href: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
-  }, function(response){});
+        caption: "What is this?"
+
+    }, function(response) {});
 };
