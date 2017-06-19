@@ -650,7 +650,7 @@ function shareThis() {
                'og:url': urlHost,
                'og:title': 'This is the title',
                'og:description': 'here is the description',
-               'og:image': urlHost + /img/kansikuvatytto.jpg
+               'og:image': urlHost + '/img/kansikuvatytto.jpg'
             }
         })
 })
