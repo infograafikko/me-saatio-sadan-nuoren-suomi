@@ -647,7 +647,7 @@ FB.ui({
         href: urlHost,
         picture: urlHost + "img/kansikuvatytto.jpg",
         title: status,
-        description: desc,
+        description: "Tähän tulee kahden lauseen pituinen kuvaus. Siitä mitä tämä content on.",
         caption: "What is this?"
 
     }, function(response) {});
