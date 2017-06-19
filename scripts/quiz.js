@@ -642,10 +642,15 @@ slider.transition() // Gratuitous intro!
 }
 
 function shareThis() {
-FB.ui({
-        method: 'feed',
-        href: urlHost,
-        caption: "What is this?"
-
-    }, function(response) {});
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+            object : {
+               'og:url': urlHost,
+               'og:title': 'This is the title',
+               'og:description': 'here is the description',
+               'og:image': urlHost + /img/kansikuvatytto.jpg
+            }
+        })
 };
