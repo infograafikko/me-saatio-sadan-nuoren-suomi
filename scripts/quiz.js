@@ -643,7 +643,7 @@ slider.transition() // Gratuitous intro!
 
 function shareThis() {
 FB.ui({
-        method: 'share',
+        method: 'feed',
         href: urlHost,
         caption: "What is this?"
 
