@@ -1,5 +1,8 @@
-	//Where is this stored
+	//Save variable information for FB Share
 	var urlHost = "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/";
+	var desc;
+	var pic;
+	var status;
 
 	//make variable for saving all reader's answers
 	var answerList = [];
@@ -601,33 +604,33 @@ slider.transition() // Gratuitous intro!
 				var elements = document.getElementsByClassName("me-tietaja");
 				elements[0].classList.remove("invisible");
 
-				var status = "Olet tietäjä";
-				var desc = "Tähän kuvausta";
-				var pic = "img/tietaja.png";
+				status = "Olet tietäjä";
+				desc = "Tähän kuvausta";
+				pic = "img/tietaja.png";
 
 			} else if (sum <= -100 & sum > -200) {
 				var elements = document.getElementsByClassName("me-pessimisti");
 				elements[0].classList.remove("invisible");
 
-				var status = "Olet pessimisti";
-				var desc = "Tähän kuvausta";
-				var pic = "img/pessimisti.png";
+				status = "Olet pessimisti";
+				desc = "Tähän kuvausta";
+				pic = "img/pessimisti.png";
 
 			} else if (sum > 100 & sum <= 200) {
 				var elements = document.getElementsByClassName("me-optimisti");
 				elements[0].classList.remove("invisible");
 
-				var status = "Olet optimisti";
-				var desc = "Tähän kuvausta";
-				var pic = "img/optimisti.png";
+				status = "Olet optimisti";
+				desc = "Tähän kuvausta";
+				pic = "img/optimisti.png";
 
 			} else {
 				var elements = document.getElementsByClassName("me-kupla");
 				elements[0].classList.remove("invisible")
 
-				var status = "Elät kuplassa";
-				var desc = "Tähän kuvausta";
-				var pic = "img/kupla.png";
+				status = "Elät kuplassa";
+				desc = "Tähän kuvausta";
+				pic = "img/kupla.png";
 
 			}
 			//Show share button
