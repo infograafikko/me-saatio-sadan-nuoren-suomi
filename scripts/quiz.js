@@ -603,7 +603,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Olet tietäjä";
 				var desc = "Tähän kuvausta";
-				var pic = "tietaja.png";
+				var pic = "img/tietaja.png";
 
 			} else if (sum <= -100 & sum > -200) {
 				var elements = document.getElementsByClassName("me-pessimisti");
@@ -611,7 +611,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Olet pessimisti";
 				var desc = "Tähän kuvausta";
-				var pic = "pessimisti.png";
+				var pic = "img/pessimisti.png";
 
 			} else if (sum > 100 & sum <= 200) {
 				var elements = document.getElementsByClassName("me-optimisti");
@@ -619,7 +619,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Olet optimisti";
 				var desc = "Tähän kuvausta";
-				var pic = "optimisti.png";
+				var pic = "img/optimisti.png";
 
 			} else {
 				var elements = document.getElementsByClassName("me-kupla");
@@ -627,7 +627,7 @@ slider.transition() // Gratuitous intro!
 
 				var status = "Elät kuplassa";
 				var desc = "Tähän kuvausta";
-				var pic = "kupla.png";
+				var pic = "img/kupla.png";
 
 			}
 			//Show share button
@@ -642,7 +642,7 @@ function shareThis() {
 FB.ui({
         method: 'share',
         href: urlHost,
-        picture: urlHost + 'img/' + pic,
+        picture: urlHost + pic,
         title: status,
         description: desc,
         caption: "What is this?"
