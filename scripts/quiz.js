@@ -644,7 +644,7 @@ slider.transition() // Gratuitous intro!
 function shareThis() {
 FB.ui({
         method: 'share',
-        link: urlHost,
+        href: urlHost,
         caption: "What is this?"
 
     }, function(response) {});
