@@ -605,7 +605,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olet tietäjä";
-				desc = "Tähän kuvausta";
+				desc = "Tiedät paljon nuorista. Ehkä enemmän kuin arvasitkaan. Jaa tulos kavereillesi ja selvitä, onko ystäväporukka yhtä fiksua kuin sinä.";
 				pic = "img/tietaja.png";
 
 			} else if (sum <= -100 & sum > -200) {
@@ -613,7 +613,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olet pessimisti";
-				desc = "Tähän kuvausta";
+				desc = "Näet nuorison aseman huonompana kuin se todellisuudessa on. Skarppaa käsityksiäsi optimistisempaan suuntaan ja olet lähempänä tämänhetkistä totuutta.";
 				pic = "img/pessimisti.png";
 
 			} else if (sum > 100 & sum <= 200) {
@@ -621,7 +621,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olet optimisti";
-				desc = "Tähän kuvausta";
+				desc = "Suhtaudut nuorison asemaan optimistisesti. Valitettavasti nuorison asema ei ole yhtä ruusuinen kuin ajattelet.";
 				pic = "img/optimisti.png";
 
 			} else {
@@ -629,7 +629,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible")
 
 				status = "Elät kuplassa";
-				desc = "Tähän kuvausta";
+				desc = "Kuljet taikaokuläärit päässä. Ne saavat todellisuuden näyttämään hyvin erilaiselta kuin, mitä tilastot osoittavat. Hyppää ulos kuplastasi tutustumaan, miltä satavuotias Suomi oikeasti näyttää.";
 				pic = "img/kupla.png";
 
 			}
