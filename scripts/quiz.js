@@ -17,20 +17,23 @@
     var firebaseRef = firebase.database().ref();
 
   //Facebook share script
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '103403023614377',
-        xfbml      : true,
-        version    : 'v2.5'
-      });
-    };
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
+	window.fbAsyncInit = function() {
+		FB.init({
+		appId            : '103403023614377',
+		autoLogAppEvents : true,
+		xfbml            : true,
+		version          : 'v2.9'
+		});
+		FB.AppEvents.logPageView();
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
 
 
 //function to call quiz module
@@ -581,7 +584,7 @@ slider.transition() // Gratuitous intro!
 
 		if (questionList.length > 0) {
 			//Take invisible class off to show the question
-			var elements = document.getElementsByClassName(questionList[0])
+			var elements = document.getElementsByClassName(questionList[0]);
 			elements[0].classList.remove("invisible");
 			//Remove the top question in the list
 			questionList.shift();
@@ -589,7 +592,40 @@ slider.transition() // Gratuitous intro!
 			//Give results for player
 			var sum = answerList.reduce(function(a, b) { return a + b; }, 0);
 			console.log(sum);
-			window.alert("Tuloksesi on: " + sum);
+			
+			//Show character depencing of result
+			if (sum <= 100 & sum > -100) {
+				var elements = document.getElementsByClassName("me-tietaja");
+				elements[0].classList.remove("invisible");
+
+				var status = "Olet tietäjä";
+				var desc = "Tähän kuvausta";
+
+			} else if (sum <= -100 & sum > -200) {
+				var elements = document.getElementsByClassName("me-pessimisti");
+				elements[0].classList.remove("invisible");
+
+				var status = "Olet pessimisti";
+				var desc = "Tähän kuvausta";
+
+			} else if (sum > 100 & sum <= 200) {
+				var elements = document.getElementsByClassName("me-optimisti");
+				elements[0].classList.remove("invisible");
+
+				var status = "Olet optimisti";
+				var desc = "Tähän kuvausta";
+
+			} else {
+				var elements = document.getElementsByClassName("me-kupla");
+				elements[0].classList.remove("invisible")
+
+				var status = "Elät kuplassa";
+				var desc = "Tähän kuvausta";
+
+			}
+			//Show share button
+				var elements = document.getElementsByClassName("me-share");
+				elements[0].classList.remove("invisible");
 		}
 
 	}
@@ -599,7 +635,7 @@ function shareThis() {
     FB.ui({
         display: 'popup',
         method: 'share',
-        title: 'Olen tietäjä',
+        title: status,
         description: 'Tiedän poikkeuksellisen paljon suomalaisten nuorten asioista. Entäpä sinä?',
         link: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
         picture: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/img/tietaja.png",
