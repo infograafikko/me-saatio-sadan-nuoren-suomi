@@ -645,7 +645,7 @@ function shareThis() {
 FB.ui({
         method: 'share',
         href: urlHost,
-        picture: urlHost + pic,
+        picture: urlHost + "img/kansikuvatytto.jpg",
         title: status,
         description: desc,
         caption: "What is this?"
