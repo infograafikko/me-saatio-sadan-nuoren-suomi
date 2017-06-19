@@ -653,4 +653,5 @@ function shareThis() {
                'og:image': urlHost + /img/kansikuvatytto.jpg
             }
         })
+})
 };
