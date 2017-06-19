@@ -648,9 +648,9 @@ function shareThis() {
         action_properties: JSON.stringify({
             object : {
                'og:url': urlHost,
-               'og:title': 'This is the title',
-               'og:description': 'here is the description',
-               'og:image': urlHost + '/img/kansikuvatytto.jpg'
+               'og:title': status,
+               'og:description': desc,
+               'og:image': urlHost + pic
             }
         })
 })
