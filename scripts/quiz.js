@@ -604,7 +604,7 @@ slider.transition() // Gratuitous intro!
 				var elements = document.getElementsByClassName("me-tietaja");
 				elements[0].classList.remove("invisible");
 
-				status = "Olet tietäjä";
+				status = "Olen nuorisotieteiden tohtori";
 				desc = "Tiedät paljon nuorista. Ehkä enemmän kuin arvasitkaan. Jaa tulos kavereillesi ja selvitä, onko ystäväporukka yhtä fiksua kuin sinä.";
 				pic = "img/tietaja.png";
 
@@ -612,7 +612,7 @@ slider.transition() // Gratuitous intro!
 				var elements = document.getElementsByClassName("me-pessimisti");
 				elements[0].classList.remove("invisible");
 
-				status = "Olet pessimisti";
+				status = "Olen ankeuttaja";
 				desc = "Näet nuorison aseman huonompana kuin se todellisuudessa on. Skarppaa käsityksiäsi optimistisempaan suuntaan ja olet lähempänä tämänhetkistä totuutta.";
 				pic = "img/pessimisti.png";
 
@@ -620,7 +620,7 @@ slider.transition() // Gratuitous intro!
 				var elements = document.getElementsByClassName("me-optimisti");
 				elements[0].classList.remove("invisible");
 
-				status = "Olet optimisti";
+				status = "Olen optimisti";
 				desc = "Suhtaudut nuorison asemaan optimistisesti. Valitettavasti nuorison asema ei ole yhtä ruusuinen kuin ajattelet.";
 				pic = "img/optimisti.png";
 
@@ -628,7 +628,7 @@ slider.transition() // Gratuitous intro!
 				var elements = document.getElementsByClassName("me-kupla");
 				elements[0].classList.remove("invisible")
 
-				status = "Elät kuplassa";
+				status = "Elän kuplassa";
 				desc = "Kuljet taikaokuläärit päässä. Ne saavat todellisuuden näyttämään hyvin erilaiselta kuin, mitä tilastot osoittavat. Hyppää ulos kuplastasi tutustumaan, miltä satavuotias Suomi oikeasti näyttää.";
 				pic = "img/kupla.png";
 
@@ -648,7 +648,7 @@ function shareThis() {
         action_properties: JSON.stringify({
             object : {
                'og:url': urlHost,
-               'og:title': status,
+               'og:title': "Testasin tietoni Suomen nuorista: " + status,
                'og:description': desc,
                'og:image': urlHost + pic
             }
