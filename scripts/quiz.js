@@ -636,7 +636,7 @@ function shareThis() {
         display: 'popup',
         method: 'share',
         title: status,
-        description: 'Tiedän poikkeuksellisen paljon suomalaisten nuorten asioista. Entäpä sinä?',
+        description: desc,
         link: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
         picture: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/img/tietaja.png",
         href: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
