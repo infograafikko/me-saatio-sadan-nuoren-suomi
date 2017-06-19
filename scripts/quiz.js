@@ -16,6 +16,22 @@
 
     var firebaseRef = firebase.database().ref();
 
+  //Facebook share script
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '103403023614377',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
 
 //function to call quiz module
 function callEverything(qID, right, highForOptismism, yAnswer1, yAnswer2, rAnswer1, rAnswer2, rAnswer3, source, pikscale, bufferwidth, bufferheight, xMarginPic, pik) {
@@ -578,3 +594,15 @@ slider.transition() // Gratuitous intro!
 
 	}
 }
+
+function shareThis() {
+    FB.ui({
+        display: 'popup',
+        method: 'share',
+        title: 'Olen tietäjä',
+        description: 'Tiedän poikkeuksellisen paljon suomalaisten nuorten asioista. Entäpä sinä?',
+        link: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
+        picture: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/img/tietaja.png",
+        href: "https://infograafikko.github.io/me-saatio-sadan-nuoren-suomi/",
+  }, function(response){});
+};
