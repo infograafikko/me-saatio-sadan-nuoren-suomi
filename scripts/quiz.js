@@ -644,10 +644,7 @@ slider.transition() // Gratuitous intro!
 function shareThis() {
 FB.ui({
         method: 'share',
-        url: urlHost,
-        picture: urlHost + "img/kansikuvatytto.jpg",
-        title: status,
-        description: "Tähän tulee kahden lauseen pituinen kuvaus. Siitä mitä tämä content on.",
+        link: urlHost,
         caption: "What is this?"
 
     }, function(response) {});
