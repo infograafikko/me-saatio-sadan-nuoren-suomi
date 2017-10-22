@@ -608,7 +608,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Minussa on tähtiainesta";
-				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/tietaja.jpg";
 
 			} else if (sum < 90 & sum >=70) {
@@ -616,7 +616,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olen kartalla";
-				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/kartta.jpg";
 
 			} else if (sum < 70 & sum >=50) {
@@ -624,7 +624,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olen metsässä";
-				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/metsa.jpg";
 
 			}  else {
@@ -632,7 +632,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible")
 
 				status = "Elän kuplassa";
-				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/kupla.jpg";
 
 			}
