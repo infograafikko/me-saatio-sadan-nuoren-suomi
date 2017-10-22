@@ -8,7 +8,7 @@
 	var answerList = [];
 
 	//List of all questions
-	var questionList = ["me2", "me3", "me4", "me5", "me6", "me7", "me8", "me9", "me10", "me11", "me12"]
+	var questionList = ["me2", "me3", "me4", "me5", "me6", "me7", "me8", "me9", "me10"]
 
   // Initialize Firebase
   var config = {
@@ -43,7 +43,7 @@
 
 
 //function to call quiz module
-function callEverything(qID, right, highForOptismism, yAnswer1, yAnswer2, rAnswer1, rAnswer2, rAnswer3, source, pikscale, bufferwidth, bufferheight, xMarginPic, pik) {
+function callEverything(qID, right, yAnswer1, yAnswer2, rAnswer1, rAnswer2, rAnswer3, source, pikscale, bufferwidth, bufferheight, xMarginPic, pik) {
 
 	//Database setup
 
@@ -282,13 +282,8 @@ slider.transition() // Gratuitous intro!
 
 		var difference;
 
-		//Count difference between right and the guess
-		//Optimism variable
-		if (highForOptismism == true) {
-			difference = guessData - right;
-		} else {
-			difference = right - guessData;
-		}
+			//Count the difference between guess and right answer
+			difference = Math.abs(guessData - right);
 
 		answerList.push(difference)
 		console.log(answerList); 
@@ -597,40 +592,48 @@ slider.transition() // Gratuitous intro!
 		} else {
 			//Give results for player
 			var sum = answerList.reduce(function(a, b) { return a + b; }, 0);
+			sum = 100 - (sum/10);
 			console.log(sum);
+
+			//Change content for h2 right%
+			document.getElementsByClassName("vastauksesi")[0].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
+			document.getElementsByClassName("vastauksesi")[1].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
+			document.getElementsByClassName("vastauksesi")[2].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
+			document.getElementsByClassName("vastauksesi")[3].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
 			
+
 			//Show character depencing of result
-			if (sum <= 100 & sum > -100) {
+			if (sum >= 90) {
 				var elements = document.getElementsByClassName("me-tietaja");
 				elements[0].classList.remove("invisible");
 
-				status = "Olen nuorisotieteiden tohtori";
-				desc = "Tiedät paljon nuorista. Ehkä enemmän kuin arvasitkaan. Jaa tulos kavereillesi ja selvitä, onko ystäväporukka yhtä fiksua kuin sinä.";
-				pic = "img/tietaja.png";
+				status = "Minussa on tähtiainesta";
+				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				pic = "img/tietaja.jpg";
 
-			} else if (sum <= -100 & sum > -200) {
-				var elements = document.getElementsByClassName("me-pessimisti");
+			} else if (sum < 90 & sum >=70) {
+				var elements = document.getElementsByClassName("me-keskiverto");
 				elements[0].classList.remove("invisible");
 
-				status = "Olen ankeuttaja";
-				desc = "Näet nuorison aseman huonompana kuin se todellisuudessa on. Skarppaa käsityksiäsi optimistisempaan suuntaan ja olet lähempänä tämänhetkistä totuutta.";
-				pic = "img/pessimisti.png";
+				status = "Olen kartalla";
+				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				pic = "img/kartta.jpg";
 
-			} else if (sum > 100 & sum <= 200) {
-				var elements = document.getElementsByClassName("me-optimisti");
+			} else if (sum < 70 & sum >=50) {
+				var elements = document.getElementsByClassName("me-alle");
 				elements[0].classList.remove("invisible");
 
-				status = "Olen optimisti";
-				desc = "Suhtaudut nuorison asemaan optimistisesti. Valitettavasti nuorison asema ei ole yhtä ruusuinen kuin ajattelet.";
-				pic = "img/optimisti.png";
+				status = "Olen metsässä";
+				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				pic = "img/metsa.jpg";
 
-			} else {
+			}  else {
 				var elements = document.getElementsByClassName("me-kupla");
 				elements[0].classList.remove("invisible")
 
 				status = "Elän kuplassa";
-				desc = "Kuljet taikaokuläärit päässä. Ne saavat todellisuuden näyttämään hyvin erilaiselta kuin, mitä tilastot osoittavat. Hyppää ulos kuplastasi tutustumaan, miltä satavuotias Suomi oikeasti näyttää.";
-				pic = "img/kupla.png";
+				desc = "Testasin tietouteni nuorista Me-säätiön Sadan nuoren Suomi -pelissä.";
+				pic = "img/kupla.jpg";
 
 			}
 			//Show share button
