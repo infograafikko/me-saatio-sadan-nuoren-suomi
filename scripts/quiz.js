@@ -609,7 +609,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Minä olen tähti";
-				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
+				desc = "Tiesin " + sum + " % nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/tietaja.jpg";
 
 			} else if (sum < 90 & sum >=70) {
@@ -617,7 +617,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olen kartalla";
-				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
+				desc = "Tiesin " + sum + " % nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/kartta.jpg";
 
 			} else if (sum < 70 & sum >=50) {
@@ -625,7 +625,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Meni metsään";
-				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
+				desc = "Tiesin " + sum + " % nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/metsa.jpg";
 
 			}  else {
@@ -633,7 +633,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible")
 
 				status = "Elän kuplassa";
-				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
+				desc = "Tiesin " + sum + " % nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/kupla.jpg";
 
 			}
@@ -652,7 +652,7 @@ function shareThis() {
         action_properties: JSON.stringify({
             object : {
                'og:url': urlHost,
-               'og:title': "Testasin tietoni Suomen nuorista: " + status,
+               'og:title': "Testasin tietoni Suomen nuorista",
                'og:description': desc,
                'og:image': urlHost + pic
             }
