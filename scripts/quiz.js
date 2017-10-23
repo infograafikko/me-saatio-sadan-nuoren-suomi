@@ -596,10 +596,10 @@ slider.transition() // Gratuitous intro!
 			console.log(sum);
 
 			//Change content for h2 right%
-			document.getElementsByClassName("vastauksesi")[0].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
-			document.getElementsByClassName("vastauksesi")[1].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
-			document.getElementsByClassName("vastauksesi")[2].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
-			document.getElementsByClassName("vastauksesi")[3].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[0].innerHTML = "Loistavaa! Tiesit " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[1].innerHTML = "Erinomaista. Tiesit " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[2].innerHTML = "Ei ihan nappiin. Tiesit testin mukaan " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[3].innerHTML = "Äh! Tiesit testin mukaan " + sum + " % nuorten asioista."
 			
 
 			//Show character depencing of result
