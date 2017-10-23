@@ -596,10 +596,10 @@ slider.transition() // Gratuitous intro!
 			console.log(sum);
 
 			//Change content for h2 right%
-			document.getElementsByClassName("vastauksesi")[0].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
-			document.getElementsByClassName("vastauksesi")[1].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
-			document.getElementsByClassName("vastauksesi")[2].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
-			document.getElementsByClassName("vastauksesi")[3].innerHTML = "Vastauksesi osuivat " + sum + "-prosenttisesti nappiin."
+			document.getElementsByClassName("vastauksesi")[0].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[1].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[2].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
+			document.getElementsByClassName("vastauksesi")[3].innerHTML = "Tiesit tämän testin mukaan " + sum + " % nuorten asioista."
 			
 
 			//Show character depencing of result
@@ -607,8 +607,8 @@ slider.transition() // Gratuitous intro!
 				var elements = document.getElementsByClassName("me-tietaja");
 				elements[0].classList.remove("invisible");
 
-				status = "Minussa on tähtiainesta";
-				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
+				status = "Minä olen tähti";
+				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/tietaja.jpg";
 
 			} else if (sum < 90 & sum >=70) {
@@ -616,15 +616,15 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible");
 
 				status = "Olen kartalla";
-				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
+				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/kartta.jpg";
 
 			} else if (sum < 70 & sum >=50) {
 				var elements = document.getElementsByClassName("me-alle");
 				elements[0].classList.remove("invisible");
 
-				status = "Olen metsässä";
-				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
+				status = "Meni metsään";
+				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/metsa.jpg";
 
 			}  else {
@@ -632,7 +632,7 @@ slider.transition() // Gratuitous intro!
 				elements[0].classList.remove("invisible")
 
 				status = "Elän kuplassa";
-				desc = "Me-säätiön 'Sadan nuoren Suomi' -pelissä voit testata, miten hyvin tunnet Suomen nuoret.";
+				desc = "Tiesin" + sum + "% nuorten asioista. Me-säätiön 'Sadan nuoren Suomi' -pelissä sinäkin voit testata, miten hyvin tunnet Suomen nuoret.";
 				pic = "img/kupla.jpg";
 
 			}
