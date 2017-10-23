@@ -593,6 +593,7 @@ slider.transition() // Gratuitous intro!
 			//Give results for player
 			var sum = answerList.reduce(function(a, b) { return a + b; }, 0);
 			sum = 100 - (sum/10);
+			sum = Math.round(sum);
 			console.log(sum);
 
 			//Change content for h2 right%
